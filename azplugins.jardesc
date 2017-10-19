@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="azplugins/azplugins.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/azplugins/azplugins.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=azplugins/&lt;HTML.Tmpl.Element"/>
+        <javaElement handleIdentifier="=azplugins/&lt;HTML.Tmpl"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.irc"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.jibble.pircbot"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker.templates.styles"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker.templates"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker.internat"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker.templates.images"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker.templates.js"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.irc.internat"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.tracker"/>
+        <javaElement handleIdentifier="=azplugins/&lt;HTML"/>
+        <javaElement handleIdentifier="=azplugins/&lt;org.gudy.azureus2.ui.swt.views"/>
+        <javaElement handleIdentifier="=azplugins/&lt;HTML.Tmpl.Parsers"/>
+    </selectedElements>
+</jardesc>

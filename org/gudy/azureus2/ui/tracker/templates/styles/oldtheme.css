@@ -1,0 +1,389 @@
+/* 
+    Document   : style
+    Created on : 2004-01-05
+    Author     : Christ Schlacta
+    Description:
+        CSS to hold all the tracker styles.
+
+*/
+
+body {
+	font-family: times, arial, verdana;
+	background-color: #EBEFFF;
+	margin: 5px;
+	padding: 0px
+}
+/* torrents links */
+a {
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+/* other links */
+a.link {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.link:hover {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.link_up {
+	color: #BCBCBC;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.link_up:hover {
+	color: #7E1414;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.cat {
+	color: #000000;
+	text-decoration: none;
+}
+a.cat:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+/* main table */
+.azborder { 
+	width: 100%;
+	background-color: #526ED6;
+}
+/* categories/uncategorized tables */
+.azcontent { 
+	width: 97%;
+	border: 1px solid #111111;
+	background-color: #AAAAAA;
+
+}
+/* details tables */
+.azcontent_info { 
+	width: 97%;
+	background-color: #AAAAAA;
+}
+/* upload page tables */
+.azcontent_upload { 
+	margin-left: 15px
+}
+/* titles of the torrents tables columns */
+th{	
+	background-color: #FFDEAD;
+	font-weight: normal;
+	text-align: left;
+	border-color: #111111;
+}
+th.c{
+	text-align: center;
+}
+/* (even) rows of the torrents tables */
+.trtorrent {
+	background-color: #D7E0FF;
+}
+/* (odd) rows of the torrents tables */
+.trtorrent_odd {
+	background-color: #C7D0EE;
+
+}
+.trtorrent_hover {
+	background-color: #EEEEEE;
+	color: #111111;
+}
+/* rows of the torrent details tables */
+.trtorrent_info {
+	background-color: #D7E0FF;
+}
+/* rows of upload page tables */
+.trupload {
+
+}
+td.ave_progress {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px
+	
+}
+div.progress_container {
+	background-color: #8199b1;
+	width: 97%;
+	vertical-align: bottom;
+	text-align: center;
+	height: 7px;
+	padding: 0px;
+	margin: 0px;
+}
+img {
+	margin: 0px;
+	padding: 0px;
+}
+img.progress {
+	height: 7px;
+	border: 0px;
+	float: left;
+	padding-left: 3px;
+	margin-left: -3px;
+	right: 0px;
+}
+td.activity {
+	font-size: 10px;
+	text-align: center;
+}
+td.more {
+	text-align: center
+}
+/* main title */
+h1 {	
+	font-size: 24pt;
+	font-weight: normal;
+}
+.disclaimer {
+	font-size: 10pt;
+}
+/* number of seeds in torrents tables */
+.torrent_0seed {
+	color: #FF0000;
+}
+.torrent_1seed {
+	color: #FF8800;
+}
+.torrent_2seed {
+	color: #FFCC00;
+}
+.torrent_3seed {
+	color: #FFFF00;
+}
+.torrent_4seed {
+	color: #CCFF00;
+}
+.torrent_isseed {
+	color: #00CC00;
+}
+/* share ratio of a peer in details tables */
+.peer_share_health0{
+	color: #FF0000;
+}
+.peer_share_health1{
+	color: #FF8800;
+}
+.peer_share_health2{
+	color: #FFCC00;
+}
+.peer_share_health3{
+	color: #FFFF00;
+}
+.peer_share_health4{
+	color: #00CC00;
+}
+.peer_share_health5{
+	color: #00CC44;
+}
+/* style of number of peers in torrents tables, seeds & share ratio in details tables */
+span {
+	font-weight: bold;
+	color: #00A400;
+}
+span.version {
+	font-size: 8pt;
+	font-weight: normal;
+	color: #000000;
+	vertical-align: top;
+}
+/* number of the page viewed in the list of numbers of pages */
+span.pagenation {
+	color: #000000;
+	font-size: 16pt;
+	font-weight: bold;
+}
+span.totals { 
+	color: #eee;
+	font-size: 10pt;
+	font-weight: bold;
+}
+/* text in upload page */
+p {
+
+}
+input {
+	border: solid 1px #555;
+	font-size: 8pt;
+
+}
+select {
+
+}
+input.s {
+	float: left;
+	width: 160px;
+	height: 18px;
+	font-size: 9pt
+}
+input.sub {
+	float: left;
+	height: 18px;
+	font-size: 8pt;
+	margin: 0 2px;
+	background-color: #FFDEAD;
+}
+input.subcat {
+	float: none;
+	height: 18px;
+	font-size: 8pt;
+	margin: 0.1em 0.5em 0em 0.5em;
+	background-color: #FFDEAD;
+}
+input.cat {
+	float: none;
+	color: #DDDDDD;
+	font-size: 8pt;
+	border: 0px;
+	margin-bottom: 0
+}
+form {
+	margin: 2px 2px 4px 0px;
+}
+span.categoryheaders {
+	color: #000000;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+span.catheaders_hover {
+	color: #000000;
+	font-weight: normal;
+	text-transform: capitalize;
+	text-decoration: underline
+}
+span.listed {
+	color: #526ED6;
+	font-weight: bold;
+}
+span.result {
+	font-weight: bold;
+}
+div.linkup {
+	width: 98%;
+	text-align: right;
+}
+a.category { 
+	color: #ddd;
+	font-size: 16pt;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+a.category:active { 
+	color: #ddd;
+}
+a.category:visited { 
+	color: #ddd;
+}
+a.category:hover {
+	color: #FFDEAD;
+	text-decoration: none;
+}
+div.header{
+	width: 100%;
+	height: 30px;
+	border-width: 0 0 0 0;
+	border-style: solid;
+	border-color: #efefef;
+}
+div.header_left{
+	float: left;
+	width: 40%;
+	font-size: 20pt;
+	height: 30px;
+}
+span.title {
+	font-size: 20pt;
+	font-weight: bold;
+	color: #526ED6;
+}
+div.header_right{
+	padding: 3px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 40%;
+	text-align: right;
+	right:auto;
+	height: 30px;
+}
+span.right {
+	float: none;
+	vertical-align: bottom;
+	margin-right: 6px;
+	margin-top: 3px;
+	padding: 3px;
+}
+div.search {
+	float: left;
+	padding: 5px;
+	width: 250px;
+}
+div.result {
+	float: left;
+	width: 150px;
+	margin: 2px;
+	padding: 3px;
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	border-color: #ababab
+}
+div.category {
+	float: left;
+	margin: 3px 5px 5px 10px;
+	padding: 3px;
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	border-color: #ababab
+}
+span#categories {
+	color: #444;
+	font-size: 10pt;
+	font-weight: normal;
+	float: center;
+}
+div.content {
+	top: auto;
+	margin: 0;
+	width: 100%;
+	float: left;
+	background-color: #526ED6;
+}
+div.float-right {
+	float: right;
+	vertical-align: bottom;
+	margin: 0 0.1em 0.2em 0.3em;
+	padding: 0 0 0.1em 0.3em;
+
+}
+div.float-left {
+	float: left;
+	padding: 0.5em 2em 1em 1em;
+	margin: 0 0.5em 0 0;
+}
+
+div.searchgroup {
+	padding: 0em 1em 1em 2em;
+	margin: 0 0 0.5em 2em;
+	color: #333;
+
+}
+div.after-divtitle > form {
+		margin: 2px
+}
+
+div.footer {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px
+}

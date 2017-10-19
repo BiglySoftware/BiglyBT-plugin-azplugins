@@ -1,0 +1,435 @@
+/* 
+    Document   : style
+    Created on : 2004-01-05
+    Author     : Christ Schlacta
+    Description:
+        CSS to hold all the tracker styles.
+    
+    Modifications: New Theme - 2005-03-01 - Gouss
+
+*/
+
+body {
+	font-family: verdana, times;
+	font-size: 9pt;
+	background-color: #142D4E; /* #465D7F, #142D4E, #19498B #2F5487*/
+	margin: 5px; 
+	color: #DDDDDD;
+	padding: 0px
+}
+/* torrents links */
+a {
+	color: #222;
+	text-decoration: none;
+}
+a:hover {
+	color: #7E1414;
+	text-decoration: underline;
+}
+/* other links */
+a.link {
+	color: #AAAAAA;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.link:hover {
+	color: #7E1414;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.link_up {
+	color: #AAAAAA;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.link_up:hover {
+	color: #7E1414;
+	font-size: 8pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.cat {
+	color: #AAAAAA;
+	text-decoration: none;
+}
+a.cat:hover {
+	color: #7E1414;
+	text-decoration: underline;
+}
+
+/* main table */
+.azborder {
+	width: 100%
+}
+/* categories/uncategorized tables */
+.azcontent {
+	width: 97%;
+	background-color: #315f9d;
+	border: 1px solid #315f9d;
+}
+/* details tables */
+.azcontent_info { 
+	width: 97%;
+	background-color: #142D4E;
+}
+/* upload page tables */
+.azcontent_upload { 
+	border: 2px #FFFFFF;
+	margin-left: 15px
+}
+/* titles of the torrents tables columns */
+th{
+	background-color: #6088c0;
+	font-family: verdana;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+	text-align: left;
+	height: 24px
+}
+th.c{
+	text-align: center;
+}
+/* (even) rows of the torrent tables */
+.azcontent tr.trtorrent {
+	background-color: #D7D7D7;
+	font-family: verdana;
+	font-size: 8pt;
+	color: #333333;
+	height: 23px
+}
+.azcontent tr.trtorrent:hover {
+	background-color: #EEEEEE;
+	color: #111111;
+}
+/* (odd) rows of the torrent tables (first is odd) */
+.azcontent tr.trtorrent_odd {
+	background-color: #c4c4c4;
+	font-family: verdana;
+	font-size: 8pt;
+	color: #333333;
+	height: 23px
+}
+.azcontent tr.trtorrent_odd:hover {
+	background-color: #EEEEEE;
+	color: #111111;
+}
+/* IE fix for hovering */
+.trtorrent_hover {
+	background-color: #b3c4db;
+	font-family: verdana;
+	font-size: 8pt;
+	color: #111111;
+	height: 23px
+}
+/* rows of the torrent details tables */
+.trtorrent_info {
+	background-color: #CCCCCC;
+	font-family: verdana;
+	font-size: 8pt;
+	color: #222222
+}
+/* rows of upload page tables */
+.trupload {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #DDDDDD
+}
+td.ave_progress {
+	font-size: 8px;
+	color: #000000;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px
+	
+}
+div.progress_container {
+	background-color: #8199b1;
+	width: 97%;
+	vertical-align: bottom;
+	text-align: center;
+	height: 7px;
+	padding: 0px;
+	margin: 0px;
+}
+img {
+	margin: 0px;
+	padding: 0px;
+}
+img.progress {
+	height: 7px;
+	border: 0px;
+	float: left;
+	padding-left: 3px;
+	margin-left: -3px;
+	right: 0px;
+}
+td.activity {
+	font-size: 8px;
+	color: #000000;
+	text-align: center;
+}
+td.more {
+	text-align: center
+}
+/* main title */
+h1 {
+	font-family: verdana, times;
+	font-size: 20pt;
+	font-weight: normal;
+	vertical-align: bottom
+}
+.disclaimer {
+	font-size: 10pt;
+}
+/* number of seeds in torrents tables */
+.torrent_0seed {
+	color: #7E1414;
+}
+.torrent_1seed {
+	color: #7E1446;
+}
+.torrent_2seed {
+	color: #7E147A;
+}
+.torrent_3seed {
+	color: #55147E;
+}
+.torrent_4seed {
+	color: #16147E;
+}
+.torrent_isseed {
+	color: #547DB5;
+}
+/* share ratio of a peer in details tables */
+.peer_share_health0{
+	color: #7E1414;
+}
+.peer_share_health1{
+	color: #7E1446;
+}
+.peer_share_health2{
+	color: #7E147A;
+}
+.peer_share_health3{
+	color: #55147E;
+}
+.peer_share_health4{
+	color: #16147E;
+}
+.peer_share_health5{
+	color: #547DB5;
+}
+/* style of number of peers in torrents tables, seeds & share ratio in details tables */
+span {
+	font-weight: bold;
+	color: #547DB5;
+}
+span.version {
+	font-size: 8pt;
+	font-weight: normal;
+	color: #DDDDDD;
+	vertical-align: top;
+}
+/* number of the page viewed in the list of numbers of pages */
+span.pagenation {
+	color: #7E1414;
+	font-weight: bold;
+}
+span.totals {
+	color: #CCCCCC;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center
+}
+/* text in upload page */
+p {
+	font-size: 9pt;
+	margin: 10px 0px 10px 0px;
+}
+input {
+	background-color: #CCCCCC;
+	border: solid 1px #547DB5;
+	font-size: 9pt
+}
+select {
+	background-color: #CCCCCC;
+	border: solid 1px #547DB5;
+}
+input.s {
+	float: left;
+	width: 160px;
+	height: 18px;
+	font-size: 9pt
+}
+input.sub {
+	float: left;
+	height: 18px;
+	font-size: 9pt;
+	margin: 0 2px
+}
+input.subcat {
+	float: none;
+	height: 18px;
+	font-size: 9pt;
+	margin: 0 2px 0 1px
+}
+input.cat {
+	float: none;
+	font-family: verdana, times;
+	color: #DDDDDD;
+	font-size: 8pt;
+	border: 0px;
+	background-color: #142D4E
+}
+form {
+	margin: 2px 2px 4px 0px;
+}
+
+span.categoryheaders {
+	color: #DDDDDD;
+	font-family: verdana, times;
+	font-size: 8pt;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+span.catheaders_hover {
+	color: #547DB5;
+	font-family: verdana, times;
+	font-size: 8pt;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+span.listed {
+	color: #DDDDDD;
+	font-family: verdana, times;
+	font-size: 8pt;
+	font-weight: bold;
+
+}
+span.result {
+	font-family: verdana, times;
+	font-size: 8pt;
+	font-weight: bold;
+}
+div.linkup {
+	width: 98%;
+	text-align: right;
+}
+a.category {
+	color: #DDDDDD;
+	font-family: verdana, times;
+	font-size: 11pt;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+a.category:active {
+	color: #DDDDDD;
+}
+a.category:visited {
+	color: #DDDDDD;
+}
+a.category:hover {
+	color: #6088c0;
+	text-decoration: none;
+}
+
+div.header{
+	width: 100%;
+	height: 30px;
+	border-width: 0 0 0 0;
+	border-style: solid;
+	border-color: #efefef;
+}
+div.header_left{
+	float: left;
+	width: 40%;
+	font-size: 20pt;
+	height: 30px;
+
+}
+span.title {
+	font-size: 20pt;
+	font-weight: normal;
+}
+div.header_right{
+
+	padding: 3px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 40%;
+	text-align: right;
+	right:auto;
+	height: 30px;
+
+}
+span.right {
+	float: none;
+	vertical-align: bottom;
+	margin-right: 6px;
+	margin-top: 3px;
+	padding: 3px;
+
+}
+div.search {
+	float: left;
+	padding: 5px;
+	width: 250px;
+}
+div.result {
+	float: left;
+	width: 150px;
+	margin: 0.2em;
+	padding: 0.2em;
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	border-color: #ababab
+}
+div.category {
+	float: left;
+	margin: 3px 5px 3px 10px;
+	padding: 3px;
+	border-style: solid;
+	border-width: 0 0 0 1px;
+	border-color: #ababab
+}
+span#categories {
+	color: #DDD;
+	font-family: verdana, times;
+	font-size: 8pt;
+	font-weight: normal;
+	float: center;
+}
+div.content {
+	top: auto;
+	margin: 0;
+	width: 100%;
+	float: left;
+}
+div.float-right {
+	float: right;
+	vertical-align: bottom;
+	margin: 0 0.1em 0.2em 0.3em;
+	padding: 0 0 0.1em 0.3em;
+}
+div.float-left {
+	float: left;
+	padding: 0.5em 2em 1em 1em;
+	margin: 0 0.5em 0 0;
+}
+
+div.searchgroup {
+	padding: 0.5em 1em 1em 2em;
+	margin: 0 0 0.5em 2em;
+	color: #333;
+}
+div.after-divtitle > form {
+		margin: 2px
+}
+
+div.footer {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px
+}
