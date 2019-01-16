@@ -1227,7 +1227,16 @@ TrackerWeb
 	  
 	  if ( AENetworkClassifier.categoriseAddress( ip ) != AENetworkClassifier.AT_PUBLIC && ip.length() > 15 ) {
 		  
-		  return( "..." + ip.substring( ip.length() - 15 ));
+		  String str = ip.substring(0,10) + "...";
+		  
+		  int pos = ip.lastIndexOf( '.' );
+		  
+		  if ( pos != -1 ) {
+			  
+			  str += ip.substring( pos+1 );
+		  }
+		  
+		  return( str );
 	  }
 	  
 	  return "*";
