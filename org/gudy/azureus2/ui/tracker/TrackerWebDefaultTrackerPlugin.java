@@ -367,7 +367,7 @@ TrackerWebDefaultTrackerPlugin
 			if ( http != 0 ){
 			
 				try{
-					TrackerWebContext ctx = plugin_interface.getTracker().createWebContext( http, Tracker.PR_HTTP );
+					TrackerWebContext ctx = plugin_interface.getTracker().createWebContext( "Tracker Web", http, Tracker.PR_HTTP );
 					
 					my_contexts.add( ctx );
 					
@@ -382,7 +382,7 @@ TrackerWebDefaultTrackerPlugin
 			if ( https != 0 ){
 				
 				try{
-					TrackerWebContext ctx = plugin_interface.getTracker().createWebContext( https, Tracker.PR_HTTPS );
+					TrackerWebContext ctx = plugin_interface.getTracker().createWebContext( "Tracker Web", https, Tracker.PR_HTTPS );
 				
 					my_contexts.add( ctx );
 					
