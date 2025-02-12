@@ -42,6 +42,7 @@ import java.util.Set;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.IdentityHashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -1549,6 +1550,8 @@ TrackerWeb
 			original_tracker_torrents,
 			new Comparator()
 			{
+				Map<TrackerTorrent,String>	names = new IdentityHashMap<>();
+				
 				@Override
 				public int
 				compare(
@@ -1566,16 +1569,31 @@ TrackerWeb
 						
 						if ( res == 0 ){
 							
-							res = alphanum_comparator.compare( t1.getTorrent().getName(), t2.getTorrent().getName());
+							res = alphanum_comparator.compare( getName(t1), getName(t2));
 						}
 						
 						return( res );
 						
 					} else {
 						
-						return( alphanum_comparator.compare( t1.getTorrent().getName(), t2.getTorrent().getName()));
-						
+						return( alphanum_comparator.compare( getName(t1), getName(t2)));						
 					}
+				}
+				
+				String
+				getName(
+					TrackerTorrent	t )
+				{
+					String name = names.get(t);
+					
+					if ( name == null ){
+						
+						name = t.getTorrent().getName();
+						
+						names.put(t, name);
+					}
+					
+					return(  name );
 				}
 			});
 	}

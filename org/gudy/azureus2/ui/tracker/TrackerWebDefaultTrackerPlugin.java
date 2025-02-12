@@ -32,7 +32,9 @@ import java.util.*;
 
 import com.biglybt.core.util.SystemTime;
 import com.biglybt.core.util.Constants;
+import com.biglybt.core.util.Debug;
 import com.biglybt.core.util.TimeFormatter;
+import com.biglybt.core.util.UrlUtils;
 import com.biglybt.pif.PluginEvent;
 import com.biglybt.pif.PluginEventListener;
 import com.biglybt.pif.PluginInterface;
@@ -458,57 +460,75 @@ TrackerWebDefaultTrackerPlugin
 						}
 						
 						Torrent	torrent = trackerTorrent.getTorrent();
-						
-						String	hash_str = formatters.encodeBytesToString( torrent.getHash());
-						
-						String	torrent_name = torrent.getName();
-	
-						URL	url = torrent.getAnnounceURL();
-						
-						boolean https_announce = url.getProtocol().toLowerCase().equals("https");
-						
-							// could be udp -> use http
-						
-						String url_str = https_announce?"https":"http";
-						
-							// work out the correct host to use. We can just use the tracker settings 
-						
-						String	host;
-						
-						URL[]	tracker_urls = tracker.getURLs();
-						
-						if ( tracker_urls.length > 0 ){
-						
-							host	= tracker_urls[0].getHost();
+												
+						if ( trackerTorrent.isExternal()){
+							
+								// pass null for name as we don't want to use the artificial one
+								// created for external torrents
+							
+							String url_str = UrlUtils.getMagnetURI( null, torrent );
+							
+							try{
+								plugin_interface.getUIManager().copyToClipBoard( url_str );
+								
+							}catch( Throwable e ){
+								
+								Debug.out( e );
+							}
 							
 						}else{
-							
-							host	= url.getHost();
-						}
 						
-						url_str += "://" + host;
-						
-							// and now work out the port, just grab the first we find
-						
-						TrackerWebContext	context = (TrackerWebContext)my_contexts.get(0);
+							String	hash_str = formatters.encodeBytesToString( torrent.getHash());
 							
-						URL[]	urls = context.getURLs();
-	
-						int	port = urls[0].getPort();
-						
-						if ( port != -1 ){
+							String	torrent_name = torrent.getName();
+		
+							URL	url = torrent.getAnnounceURL();
+
+							boolean https_announce = url.getProtocol().toLowerCase().equals("https");
 							
-							url_str += ":" + port;
-						}			
-						
-						try{
-							url_str +=  "/torrents/" + URLEncoder.encode( torrent_name, Constants.DEFAULT_ENCODING).replaceAll("\\+", "%20") + ".torrent?" + hash_str;
+								// could be udp -> use http
 							
-							plugin_interface.getUIManager().copyToClipBoard( url_str );
+							String url_str = https_announce?"https":"http";
 							
-						}catch( Throwable  e ){
+								// work out the correct host to use. We can just use the tracker settings 
 							
-							e.printStackTrace();
+							String	host;
+							
+							URL[]	tracker_urls = tracker.getURLs();
+							
+							if ( tracker_urls.length > 0 ){
+							
+								host	= tracker_urls[0].getHost();
+								
+							}else{
+								
+								host	= url.getHost();
+							}
+							
+							url_str += "://" + host;
+							
+								// and now work out the port, just grab the first we find
+							
+							TrackerWebContext	context = (TrackerWebContext)my_contexts.get(0);
+								
+							URL[]	urls = context.getURLs();
+		
+							int	port = urls[0].getPort();
+							
+							if ( port != -1 ){
+								
+								url_str += ":" + port;
+							}			
+							
+							try{
+								url_str +=  "/torrents/" + URLEncoder.encode( torrent_name, Constants.DEFAULT_ENCODING).replaceAll("\\+", "%20") + ".torrent?" + hash_str;
+								
+								plugin_interface.getUIManager().copyToClipBoard( url_str );
+								
+							}catch( Throwable  e ){
+								
+								Debug.out( e );
+							}
 						}
 					}
 				});
@@ -877,6 +897,8 @@ TrackerWebDefaultTrackerPlugin
 					throw( new NoStackException( "RSS Feed initialising, please wait..." ));
 				}
 				
+				response.setGZIP( true );
+								
 				Map	args = getArgs( url );
 				
 				String	val = (String)args.get( "magnet");
