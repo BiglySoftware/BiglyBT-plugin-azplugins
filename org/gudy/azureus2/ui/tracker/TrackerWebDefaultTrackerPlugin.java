@@ -31,6 +31,7 @@ import java.io.*;
 import java.util.*;
 
 import com.biglybt.core.util.SystemTime;
+import com.biglybt.core.util.AENetworkClassifier;
 import com.biglybt.core.util.Constants;
 import com.biglybt.core.util.Debug;
 import com.biglybt.core.util.TimeFormatter;
@@ -998,7 +999,7 @@ TrackerWebDefaultTrackerPlugin
 					http_host 	= http_host_port.substring(0,pos);
 					http_port	= http_host_port.substring(pos);
 				}
-				if ( http_host.endsWith( ".i2p") || http_host.endsWith( ".onion" )){
+				if ( AENetworkClassifier.categoriseAddress( http_host ) != AENetworkClassifier.AT_PUBLIC ){
 				
 					tracker_url_string = tracker_url.getProtocol() + "://" + http_host + http_port + "/";
 					
