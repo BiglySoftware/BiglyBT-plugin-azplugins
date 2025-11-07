@@ -860,8 +860,8 @@ extends PircBot
 			if (plugin_config.getUnsafeIntParameter("enable.seedingonly.upload.rate",0) == 0)
 				upSeedingOnly = "N/A";
 			else
-				upSeedingOnly = "" + plugin_config.getUnsafeIntParameter("Max Upload Speed Seeding KBs", 0);
-			this.processINFO(sourceNick, "Transfer: Max upload speed: " + plugin_config.getUnsafeIntParameter("Max Upload Speed KBs", 0) + " " + (plugin_config.getUnsafeIntParameter("Auto Upload Speed Enabled", 1) == 1?"(Auto) ":"") + "| Max upload speed while seeding: " + upSeedingOnly + " | Max download speed: " + plugin_config.getUnsafeIntParameter("Max Download Speed KBs", 0) + " | Default max upload slots: " + plugin_config.getUnsafeIntParameter("Max Uploads", 4) + "");
+				upSeedingOnly = "" + plugin_config.getUnsafeLongParameter("Max Upload Speed Seeding KBs", 0);
+			this.processINFO(sourceNick, "Transfer: Max upload speed: " + plugin_config.getUnsafeLongParameter("Max Upload Speed KBs", 0) + " " + (plugin_config.getUnsafeIntParameter("Auto Upload Speed Enabled", 1) == 1?"(Auto) ":"") + "| Max upload speed while seeding: " + upSeedingOnly + " | Max download speed: " + plugin_config.getUnsafeLongParameter("Max Download Speed KBs", 0) + " | Default max upload slots: " + plugin_config.getUnsafeIntParameter("Max Uploads", 4) + "");
 			}
 		catch (Exception ex) {
 			this.processINFO(sourceNick, catchError + ex.getMessage().toString() + ")");
